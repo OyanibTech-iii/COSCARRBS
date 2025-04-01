@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(217, 164, 225, 0.919);
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents scrolling of the entire page */
+}
+
+/* Main container layout */
+.container {
+    display: flex;
+}
+.sidebar .ulsp{
+    margin: 0;
+    padding: 0;
+}
+
+/* Sticky Sidebar */
+.sidebar {
+    z-index: 1;
+    width: 180px;
+    height: 100vh; /* Full height */
+    position: fixed; /* Sticky effect */
+    top: 0;
+    left: 0;
+    background-color: rgba(193, 15, 152, 0.1);
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Removes scrollbar */
+}
+
+/* Sidebar List Items (Vertical Column Layout) */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+    padding: 10px;
+    cursor: pointer;
+    color: rgb(115, 26, 93);
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+}
+
+.sidebar ul li:hover {
+    color: rgb(193, 15, 152);
+    font-weight: bold;
+}
+
+/* Main Content (No Scroll) */
+.main-content {
+
+    margin-left: 270px; /* Prevents overlap with sidebar */
+    flex-grow: 1;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Scrollable Menu Section */
+.menu {
+    flex-grow: 1;
+    overflow-y: auto; /* Allows scrolling only in the menu section */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding-right: 10px; /* Prevents content from touching scrollbar */
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 8px;
+}
+
+/* Navigation */
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+}
+
+li {
+    margin-right: 12px;
+    cursor: pointer;
+}
+nav{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    color: rgb(193, 15, 152);
+}
+
+nav li:hover {
+    color: rgb(193, 15, 152);
+    font-weight: bold;
+}
+ /* Styling submint product button */
+ .btn{
+    color: white;
+    border: none;
+    
+ }
+/* Header Text */
+.text {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: rgb(117, 20, 117);
+}
+
+.text h1 {
+    font-weight: 700;
+}
+
+/* Button Styling */
+button {
+    border-width: 1px;
+    color: white;
+    background-color: rgb(193, 15, 152);
+    border-radius: 12px;
+    margin-top: 12px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    font-weight: 300;
+    background-color: rgb(115, 26, 93);
+    color: rgb(249, 152, 249);
+}
+
+/* Product Card */
+.product {
+    background: rgba(241, 238, 242, 0.024);
+    border-radius: 8px;
+    box-shadow: 3px 6px 11px rgba(10, 0, 6, 0.2);
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.product img {
+    margin-top: 5px;
+    width: 80%;
+    border-radius: 4px;
+}
+
+.product h3 {
+    color: rgb(193, 15, 152);
+    margin: 10px 0;
+}
+
+.product p {
+    color: #555;
+}
+
+/* Quantity Control */
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.quantity-btn {
+    background-color: rgb(193, 15, 152);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.quantity-btn:hover {
+    background-color: rgb(115, 26, 93);
+}
+
+.quantity-control input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-frame {
+    width: 50px;
+    height: 50px;
+    clip-path: circle(50%);
+    overflow: hidden;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.company-name {
+    font-weight: bold;
+    color: rgb(115, 26, 93);
+    margin-left: 12px;
+}
+
+/* Sidebar Header */
+.h4sp {
+    color: purple;
+    font-weight: 200;
+    margin-top: 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.h4sp:hover {
+    color: rgb(193, 15, 152);
+    font-weight: bold;
+}
+
+.h4sp i {
+    margin-right: 10px;
+}
+
+.footer{
+    text-align: center;
+    font-size: 12px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 180px;
+    background-color: #f8f9fa00; 
+    padding: 10px;
+    color: rgb(116, 6, 116); 
+    text-align: center;
+}
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 6px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(193, 15, 152, 0.5); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+/* Tablets (769px - 992px) */
+@media (max-width: 992px) and (min-width: 769px) {
+    .sidebar {
+        width: 150px;
+    }
+
+    .main-content {
+        margin-left: 160px; /* Adjusted for smaller sidebar */
+    }
+
+    .menu {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Small tablets and large phones (569px - 768px) */
+@media (max-width: 768px) and (min-width: 569px) {
+    .sidebar {
+        width: 130px;
+    }
+
+    .main-content {
+        margin-left: 140px;
+    }
+
+    .menu {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 12px;
+    }
+}
+
+/* Mobile Phones (up to 568px) */
+@media (max-width: 568px) {
+    .sidebar {
+        width: 100px;
+        padding: 5px;
+    }
+
+    .main-content {
+        margin-left: 110px;
+        padding: 10px;
+    }
+
+    .sidebar ul li {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .menu {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 10px;
+    }
+
+    .product img {
+        width: 50%;
+    }
+
+    .product h3 {
+        font-size: 14px;
+    }
+
+    .quantity-control input {
+        width: 30px;
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        font-size: 10px;
+        padding: 5px;
+    }
+    footer{
+        justify-content: start;
+        color: rgb(103, 6, 120);
+    }
+}
+
+/* Extra Small Screens (up to 400px) */
+@media (max-width: 400px) {
+    .sidebar {
+        display: none; /* Hide sidebar for very small screens */
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .menu {
+        grid-template-columns: 1fr; /* Keep single column */
+    }
+
+    .product {
+        padding: 5px;
+    }
+
+    .product h3 {
+        font-size: 12px;
+    }
+
+    .quantity-control input {
+        width: 25px;
+    }
+
+    th,
+    td {
+        font-size: 9px;
+        padding: 4px;
+    }
+    footer{
+        justify-content: start;
+        color: rgb(103, 6, 120);
+    }
+
+}
+

@@ -1,0 +1,224 @@
+ /* importing google fonts(Roboto) in csss */
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+ body {
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 0;
+     font-family: 'Poppins', sans-serif;
+     overflow: hidden;
+     background: purple;
+     position: relative;
+ }
+
+ canvas {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: -1;
+ }
+
+ .signup-container input[type="text"],
+ .signup-container input[type="email"],
+ .signup-container input[type="password"] {
+     width: 100%;
+     padding: 10px;
+     margin: 10px 0;
+     border: none;
+     border-radius: 10px;
+     outline: none;
+     box-sizing: border-box;
+ }
+
+ .password-container {
+     position: relative;
+     width: 100%;
+ }
+
+ .password-container input[type="password"] {
+     width: 100%;
+     padding: 10px;
+     padding-right: 35px;
+     /* Space for the eye icon */
+     box-sizing: border-box;
+ }
+
+ .eye-icon {
+     position: absolute;
+     top: 50%;
+     right: 15px;
+     /* Adjusted from 10px to provide better spacing */
+     transform: translateY(-50%);
+     cursor: pointer;
+     z-index: 1;
+     font-size: 16px;
+     color: rgb(139, 5, 139);
+     background: transparent;
+     padding: 5px;
+     border-radius: 50%;
+     transition: background 0.3s ease;
+ }
+
+ .eye-icon:hover {
+     color: rgb(132, 9, 248);
+ }
+
+ input,
+ input:focus {
+     text-indent: 7px;
+     color: rgb(68, 5, 77);
+     letter-spacing: 2px;
+     font-family: 'Poppins', sans-serif;
+ }
+
+ .signup-container {
+     background: rgba(255, 255, 255, 0.3);
+     box-shadow: 0 8px 32px rgba(35, 1, 58, 0.37);
+     backdrop-filter: blur(6.5px);
+     -webkit-backdrop-filter: blur(6.5px);
+     border-radius: 10px;
+     border: 1px solid rgba(255, 255, 255, 0.18);
+     padding: 40px;
+     width: 300px;
+     text-align: center;
+ }
+
+ .signup-container h2 {
+     color: white;
+     margin-bottom: 20px;
+ }
+
+ .signup-container a {
+     display: block;
+     margin-top: 10px;
+     color: #e0e0e0;
+     text-decoration: none;
+     /* Removes underline */
+     font-size: 0.9em;
+ }
+
+ .signup-container a:hover {
+     text-decoration: none;
+     /* Ensures no underline on hover */
+ }
+
+ .signup-container button {
+     /* margin-left: 10px; */
+     width: 100%;
+     padding: 10px;
+     border: none;
+     border-radius: 10px;
+     background: rgb(108, 4, 134);
+     color: white;
+     cursor: pointer;
+ }
+
+ .signup-container button:hover {
+     background: rgb(49, 2, 63);
+ }
+
+ .signup-container a {
+     display: block;
+     margin-top: 10px;
+     color: rgb(49, 2, 63);
+     text-decoration: none;
+     font-size: 0.9em;
+ }
+
+ .signup-container a:hover {
+     text-decoration: none;
+ }
+
+ a>b:hover {
+     text-decoration: underline;
+     color: rgb(246, 243, 247);
+ }
+
+ .logo {
+     margin: 0;
+     padding: 0;
+     height: 180px;
+     width: 180px;
+ }
+
+ /* a media querry used for responsive webpage that if the webpage resizes the background color changes also */
+ @media (max-width: 992px) and (min-width: 769px) {
+     body {
+         background: red;
+     }
+
+     .signup-container button {
+         background: rgb(244, 30, 30);
+     }
+
+     .signup-container button:hover {
+         background: rgb(108, 8, 8);
+     }
+
+ }
+
+ @media (max-width: 768px) and (min-width: 569px) {
+     body {
+         background: cyan;
+     }
+
+     .signup-container {
+         transform: scale(0.8);
+     }
+
+     .signup-container button {
+         background: rgb(38, 205, 247);
+     }
+
+     .signup-container button:hover {
+         background: rgb(7, 134, 141);
+     }
+
+     .signup-container a {
+         color: rgb(25, 4, 74);
+     }
+
+     .signup-container h2 {
+         color: rgb(25, 4, 74);
+     }
+ }
+
+ @media (max-width: 568px) {
+     body {
+         background: rgb(250, 115, 5);
+     }
+
+     .signup-container {
+         transform: scale(0.8);
+     }
+
+     .signup-container button {
+         background: rgb(232, 90, 7);
+     }
+
+     .signup-container button:hover {
+         background: rgb(171, 68, 5);
+     }
+
+     .signup-container a {
+         color: rgb(59, 42, 10);
+     }
+
+     .signup-container h2 {
+         color: rgb(59, 42, 10);
+     }
+
+     .signup-container .eye-icon {
+         color: rgb(227, 88, 8);
+     }
+
+     input,
+     input:focus {
+         color: rgb(211, 79, 7);
+         letter-spacing: 1.2px;
+     }
+ }

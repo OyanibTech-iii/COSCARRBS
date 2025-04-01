@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+body {
+    background-color: rgba(118, 16, 165, 0.81);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.forTb {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin-right: 20px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin: 15px;
+    box-shadow: 0px 4px 8px rgba(18, 0, 20, 0.575);
+    background-color: rgba(138, 6, 161, 0.938);
+    color: white;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+
+}
+
+.back-link i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.back-link:hover {
+    background-color: rgba(138, 6, 161, 0.829);
+    color: white;
+    box-shadow: 0px 4px 14px rgb(18, 0, 20);
+    transform: translateX(-3px);
+}
+
+.fa-chevron-left:before {
+    content: "\f053";
+}
+
+nav {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+nav ul li {
+    background-color: rgba(144, 13, 188, 0.92);
+    padding: 10px 20px;
+    /* Magdagdag ng horizontal padding */
+    display: inline-block;
+    /* Panatilihing inline habang may padding */
+    min-width: 10%;
+    /* Gamitin ang minimum width para di lumagpas */
+    border-radius: 5px;
+    text-align: center;
+    list-style: none;
+    transition: 0.3s;
+    white-space: nowrap;
+    /* Pigilan ang pag-wrap ng text */
+}
+
+
+nav li:hover {
+    font-weight: bolder;
+}
+
+table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid rgba(144, 13, 188, 0.92);
+    text-align: center;
+}
+
+th {
+    background-color: rgba(161, 10, 191, 0.92);
+    color: white;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.fa-chevron-left {
+    margin-right: 5px;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(193, 15, 152, 0.5);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.paymentModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(11, 11, 11, 0.7);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.paymentModal h2 {
+    color: rgb(245, 239, 246);
+    margin-bottom: 23px;
+}
+
+.payment-option button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.paypal>i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.paypal {
+    background: #0070ba;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.9px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.paypal:hover {
+    background: #033353;
+    color: white;
+}
+
+.gcash {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.9px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.gcash:hover {
+    background: #034082;
+    color: white;
+}
+
+.cod {
+    background: rgb(6, 221, 35);
+    color: rgb(216, 213, 216);
+    font-weight: bold;
+    letter-spacing: 0.9px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.cod:hover {
+    background: #0b9e1e;
+    color: white;
+}
+
+.gcashIcon {
+    width: 12px;
+    height: 12px;
+    color: white;
+}
+
+.close-btn {
+    background: red;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.close-btn:hover {
+    background: rgb(149, 18, 6);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    body {
+        background: red;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background: cyan;
+        color: rgba(6, 107, 140, 0.92);
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 568px) {
+    body {
+        background: rgba(250, 115, 5, 0.84);
+        color: rgba(146, 53, 10, 0.92);
+    }
+
+    a {
+        color: rgba(146, 53, 10, 0.92);
+    }
+
+    nav ul {
+        color: white;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        box-shadow: 0 2px 2px 0 rgba(31, 38, 135, 0.37);
+        margin-left: 15px;
+        background-color: rgb(235, 86, 22);
+        /* Red background */
+        padding: 10px 57px;
+        /* Top & bottom padding, no extra width */
+        width: 100%;
+        /* Set width to 90% */
+        border-radius: 8px;
+        /* Rounded corners */
+        text-align: center;
+        /* Center text */
+        list-style: none;
+        /* Remove bullet points */
+        transition: 0.3s;
+        /* Smooth hover effect */
+    }
+
+    nav ul li:hover {
+        background-color: rgba(91, 29, 6, 0.92);
+        /* Darker red on hover */
+        cursor: pointer;
+    }
+
+
+    nav {
+        justify-content: center;
+    }
+
+    nav ul {
+
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+    }
+
+    .forTb {
+        overflow-x: auto;
+    }
+
+    th,
+    td {
+        border: 1px solid rgba(200, 76, 18, 0.92);
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    th {
+        background-color: rgb(235, 86, 22);
+    }
+
+    footer {
+        margin: 20px;
+        text-align: center;
+        font-size: 10px;
+    }
+
+}
+
+.ulsp {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Increased spacing between items */
+    list-style: none;
+    padding: 10px 0; /* Added vertical padding */
+    margin: 0;
+    background-color: rgba(144, 13, 188, 0.1); /* Subtle background for better visibility */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.ulsp li {
+    background-color: rgba(144, 13, 188, 0.92);
+    padding: 12px 25px; /* Adjusted padding for better spacing */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center;
+    list-style: none;
+    transition: all 0.3s ease; /* Smooth hover effect */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.ulsp li:hover {
+    background-color: rgba(161, 10, 191, 0.92); /* Slightly darker hover effect */
+    transform: scale(1.05); /* Subtle zoom effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow on hover */
+}

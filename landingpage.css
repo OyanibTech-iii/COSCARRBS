@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    margin-top: 0;
+    width: 150px;
+    height: 100vh;
+    background-color: rgba(148, 23, 211, 0.81);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo-container {
+    text-align: center;
+}
+
+.logo-frame {
+    width: 70px;
+    height: 70px;
+    background: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+ul .ulsp{
+    margin-top: 25px;
+    margin-bottom: 65px;
+}
+.footerStyling >p{
+   letter-spacing: 1px;
+    display: flex;
+    font-size: 10px;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    white-space: pre-line;
+}
+.logo {
+    width: 62px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.company-name {
+    margin-top: 25px;
+    color: #d1d5db;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.ulsp {
+    list-style: none;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.ulsp li {
+    padding: 9px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 16px;
+    color: #d1d5db;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.ulsp li i {
+    font-size: 18px;
+    margin-right: 12px;
+}
+
+.ulsp li:hover {
+    background-color: #343541;
+}
+
+.footer {
+    text-align: center;
+    font-size: 11px;
+    color: rgb(247, 247, 247);
+    border-top: 1px solid rgb(209, 212, 248);
+}
+
+.main-content {
+    flex-grow: 1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-content img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.main-content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(94, 9, 127, 0.7);
+    pointer-events: none;
+}
+
+.overlay-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 58px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 18px rgba(0, 0, 0, 0.7);
+    z-index: 10;
+}
+.foot {
+    position: absolute;
+    top: 95%;
+    z-index: 10;
+    color: white;
+    font-size: 18px;
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+    .main-content img {
+        width: 110%;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 569px) {
+    .main-content img {
+        width: 120%;
+    }
+}
+
+@media (max-width: 558px) {
+    .sidebar {
+        margin-top: 0;
+        background-color: rgb(202, 81, 11);
+    }
+    .ulsp >.footerStyling {
+        font-size: 1px;
+        justify-content: start;
+
+    }
+    div >.ulsp{
+        display: flex;
+    }
+    .main-content::after {
+        background-color: rgba(162, 42, 9, 0.66);
+    }
+
+    .main-content img {
+        width: 150%;
+    }
+
+    .overlay-text {
+        font-size: 31px;
+    }
+
+    .main-content >.foot{
+       top: 90%;
+        font-size: 9px;
+    }
+    .company-name{
+        font-size: 12px;
+    }
+    .logo,
+    .logo-frame,
+    .company-name {
+        transform: scale(0.9);
+    }
+
+    .ulsp li span {
+        display: none;
+    }
+
+    .ulsp li {
+        justify-content: center;
+    }
+}
